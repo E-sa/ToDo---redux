@@ -1,0 +1,75 @@
+#li-container {
+    margin-top: 12px;
+    padding: 0;
+
+    :last-child {
+        border-radius: 0 0 3px 3px;
+    }
+
+    :first-child {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .each-task {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        box-sizing: border-box;
+        padding-left: 10px;
+        align-items: center;
+
+
+        //1. each task checkbox
+        .regular-checkbox {
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            border: 1px solid grey;
+            border-radius: 40px;
+            position: relative;
+            margin: auto 20px auto 10px;
+        }
+
+        .regular-checkbox:checked {
+            background: rgb(127, 189, 248);
+            background: linear-gradient(153deg, rgba(127, 189, 248, 1) 37%, rgba(156, 126, 223, 1) 71%);
+            position: relative;
+            border: none;
+        }
+
+        .regular-checkbox:checked ~ p {
+            text-decoration: line-through;
+        }
+        // trying to solve check mark in safari problem #1
+        .regular-checkbox:checked:after {
+            content: "\2714 \fe0e";
+            color: #fff;
+            position: absolute;
+        }
+
+        .regular-checkbox:not(:checked):hover {
+            border-radius: 100rem;
+            border: solid 1px transparent;
+            background-image: linear-gradient(rgba(127, 189, 248, 1), rgba(156, 126, 223, 1)),
+                linear-gradient(153deg, rgba(127, 189, 248, 1), rgba(156, 126, 223, 1));
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+        }
+
+        // 2.each task text
+        p {
+            display: contents;
+            line-height: 46px;
+        }
+
+        // 3.each task cross mark
+        .li-cross-mark {
+            margin: auto;
+            margin-right: 11px;
+            text-align: center;
+        }
+
+        .li-cross-mark:after {
+            content: "\02df";
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.create-todo-input-and-li-container {
+    
+    
+/* do not group these rules */
+*::-webkit-input-placeholder {
+  color: rgb(95,97,122);
+}
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: rgb(95,97,122);
+  opacity: 1;
+}
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: rgb(95,97,122);
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgb(95,97,122);
+}
+*::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(95,97,122);
+}
+*::placeholder {
+  /* modern browser */
+  color: rgb(95,97,122);
+}
+    
+    #create-todo-input {
+        border-radius: 3px;
+        border: none;
+        box-sizing: border-box;
+        padding-left: 60px;
+        line-height: 40px;
+        box-sizing: border-box
+    }
+    
+    #create-todo-label {
+        display: inherit;
+        position: relative;
+        border: 1px solid grey;
+        border-radius: 25px;
+    }
+    
+}

@@ -1,0 +1,191 @@
+@import "_brekpoints-mixin";
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 370px) {
+  @include brekpoints-mixin(
+    // $fontSize,
+    10px,
+    // $checkMarkFontSize,
+    15px,
+    // $crossFontSize,
+    25px,
+    // $titleFontSize,
+    30px,
+    // $lastLiFontSize,
+    15px,
+    // $containerwidth,
+    80vw,
+    // $input-Li-height,
+    55px,
+    // $checkmark-cross-moonSun-size
+    20px,
+    //last-li-span-margin
+    15px,
+    //cross line height
+    35px,
+    // checkmarkLeft,
+    3px,
+    // checkmarkTop,
+    1px,
+    // inputcircleLeft,
+    20px,
+    // inputcircletop,
+    35px,
+  );
+
+  #filters-span-l {
+    display: none;
+  }
+  #filters-span-s {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    li {
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+    #li-container .each-task p {
+    line-height: inherit;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 370px) {
+  @include brekpoints-mixin(
+    // $fontSize,
+    15px,
+    // $checkMarkFontSize,
+    15px,
+    // $crossFontSize,
+    25px,
+    // $titleFontSize,
+    30px,
+    // $lastLiFontSize,
+    15px,
+    // $containerwidth,
+    80vw,
+    // $input-Li-height,
+    55px,
+    // $checkmark-cross-moonSun-size
+    20px,
+    //last-li-span-margin
+    15px,
+    //cross line height
+    35px,
+    // checkmarkLeft,
+    3px,
+    // checkmarkTop,
+    1px,
+    // inputcircleLeft,
+    20px,
+    // inputcircletop,
+    40px,
+  );
+
+  #filters-span-l {
+    display: none;
+  }
+  #filters-span-s {
+    display: flex;
+
+    margin-top: 10px;
+    li {
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+    #li-container .each-task p {
+    line-height: inherit;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  @include brekpoints-mixin(
+    // $fontSize,
+    20px,
+    // $checkMarkFontSize,
+    20px,
+    // $crossFontSize,
+    45px,
+    // $titleFontSize,
+    45px,
+    // $lastLiFontSize,
+    15px,
+    // $containerwidth,
+    40vw,
+    // $input-Li-height,
+    80px,
+    // $checkmark-cross-moonSun-size
+    30px,
+    //last-li-span-margin
+    10px,
+    //cross line height
+    50px,
+    // checkmarkLeft,
+    5px,
+    // checkmarkTop,
+    1.5px,
+    // inputcircleLeft,
+    20px,
+    // inputcircletop,
+    55px,
+  );
+  #filters-span-l {
+    display: inline-block;
+  }
+  #filters-span-s {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1440px) {
+  @include brekpoints-mixin(
+    // $fontSize,
+    35px,
+    // $checkMarkFontSize,
+    25px,
+    // $crossFontSize,
+    55px,
+    // $titleFontSize,
+    55px,
+    // $lastLiFontSize,
+    25px,
+    // $containerwidth,
+    60vw,
+    // $input-Li-height,
+    100px,
+    // $checkmark-cross-moonSun-size
+    35px,
+    //last-li-span-margin
+    45px,
+    //cross line height
+    50px,
+    // checkmarkLeft,
+    5px,
+    // checkmarkTop,
+    1.5px,
+    // inputcircleLeft,
+    20px,
+    // inputcircletop,
+    70px,
+  );
+
+  #filters-span-l {
+    display: inline-block;
+  }
+
+  #filters-span-s {
+    display: none;
+  }
+}

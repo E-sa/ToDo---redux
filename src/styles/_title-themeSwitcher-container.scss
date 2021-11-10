@@ -1,0 +1,37 @@
+.title-theme-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    h1 {
+        color: #ffffff;
+    }
+
+    #sun-moon-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .sun-moon-checkbox {
+        margin: 0;
+        z-index: 100;
+        position: relative;
+        left: 23px;
+        opacity: 0;
+    }
+
+    .sun-moon-div {
+        position: relative;
+        z-index: 6;
+        background-image: url("../pictures/icon-sun.svg");
+        background-repeat: no-repeat;
+    }
+
+    #toggle:checked ~ .sun-moon-div {
+        background-image: url("../pictures/icon-moon.svg");
+    }
+    
+     #theme-switch-label{
+        opacity: 0;
+    }
+}

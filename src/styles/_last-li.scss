@@ -1,0 +1,22 @@
+[id^="last-li"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+[id^="all"],
+[id^="active"],
+[id^="completed"]
+ {
+    font-weight: bold;
+}
+
+.activeFilter {
+    color: rgb(77, 119, 190) !important;
+}
+
+#filters-span-s {
+    display: none;
+}

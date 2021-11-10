@@ -1,0 +1,82 @@
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin brekpoints-mixin(
+    $fontSize,
+    $checkMarkFontSize,
+    $crossFontSize,
+    $titleFontSize,
+    $lastLiFontSize,
+    $containerwidth,
+    $input-Li-height,
+    $checkmark-cross-moonSun-size,
+    $last-li-span-margin,
+    $crossLineHeight,
+    $checkmarkLeft,
+    $checkmarkTop,
+    $inputCircleLeft,
+    $inputCircleTop,
+    
+) {
+    #create-todo-input {
+        @include width-height($containerwidth, $input-Li-height);
+        font-size: $fontSize;
+    }
+
+    .each-task {
+        @include width-height($containerwidth, $input-Li-height);
+        font-size: $fontSize;
+    }
+
+    .regular-checkbox {
+        @include width-height($checkmark-cross-moonSun-size, $checkmark-cross-moonSun-size);
+    }
+
+    .regular-checkbox:checked:after {
+        font-size: $checkMarkFontSize;
+        position: absolute;
+        left: $checkmarkLeft;
+        top: $checkmarkTop;
+    }
+
+    .li-cross-mark {
+        @include width-height($checkmark-cross-moonSun-size, $checkmark-cross-moonSun-size);
+    }
+
+    .li-cross-mark:after {
+        @include width-height($checkmark-cross-moonSun-size, $checkmark-cross-moonSun-size);
+        font-size: $crossFontSize;
+        line-height: $crossLineHeight;
+    }
+
+    .title-theme-container {
+        width: $containerwidth;
+        h1 {
+            font-size: $titleFontSize;
+        }
+    }
+
+    .sun-moon-checkbox {
+        @include width-height($checkmark-cross-moonSun-size, $checkmark-cross-moonSun-size);
+    }
+
+    .sun-moon-div {
+        @include width-height($checkmark-cross-moonSun-size, $checkmark-cross-moonSun-size);
+        background-size: $checkmark-cross-moonSun-size;
+    }
+
+    #create-todo-label {
+        @include width-height($checkmark-cross-moonSun-size, $checkmark-cross-moonSun-size);
+        top: $inputCircleTop;
+        left: $inputCircleLeft;
+    }
+
+    [id^="last-li"] {
+        font-size: $lastLiFontSize;
+        span {
+            margin-left: $last-li-span-margin;
+        }
+    }
+}
